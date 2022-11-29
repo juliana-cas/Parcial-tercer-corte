@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto 1</title>
+</head>
+<body>
+<script>
+console.log("Bienvenido, esta es la atención de clientes a través de la asignación de turnos en la cooperativa.");
+let Servicio = prompt("¿Desea usar el sistema? Digite S para continuar y N para cancelar");
+let PagosC = 0;
+let PagosE = 0;
+let AsesoC = 0;
+let AsesoE = 0;
+while (Servicio == S) { // llave de while
+    let TipoCliente = prompt("¿Eres cliente de la cooperativa o externo? Digita C si eres de la cooperativa, o E si eres externo");
+    let atencion = prompt("¿Que tipo de atención desea? Digite P para pagos y A para asesoría");
+    if (atencion == "P") {
+        let TipoPago = prompt("¿Que tipo de pago desea? Digite 1 para cuotas y 2 para administración.");
+    }
+    switch (TipoCliente) {
+        case "E": {
+        switch (atencion) {
+            case "P": {
+                switch (TipoPago) {
+                    case "1":
+                    setTimeout(()=>{
+                    console.log("Por ser cliente externo, debes esperar un momento.");
+                    },5000)
+                    console.log("Eres cliente externo, deseas el servicio de pagos y cuotas. Estamos para ayudarte");
+                    break;
+                    case "2": 
+                    setTimeout(()=>{
+                    console.log("Por ser cliente externo, debes esperar un momento.");
+                    },5000)
+                    console.log("Eres cliente externo, deseas el servicio de pagos y administración. Estamos para ayudarte");
+                    break;
+                        }
+                    }
+            case "A" :{
+                setTimeout(()=>{
+                    console.log("Por ser cliente externo, debes esperar un momento.");
+                    },5000)
+                    console.log("Eres cliente externo, deseas el servicio de asesoría. Estamos para ayudarte");
+                    break;
+        }
+        
+        case "C": {
+            switch (atencion) {
+            case "P": {
+                switch (TipoPago) {
+                    case "1":
+                    console.log("Por ser cliente de la cooperativa, te atendemos primero. Deseas el servicio de pago y cuotas, estamos para ayudarte.");
+                    break;
+                    case "2": 
+                    console.log("Por ser cliente de la cooperariva, te atendemos primero. Deseas el servicio de pago y administración, estamos para ayudarte");
+                    break;
+                        }
+        }
+            case "A" :{
+                console.log("Por ser cliente de la cooperativa, te atendemos primero. Tú deseas el servicio de asesoría. Estamos para ayudarte");
+            }
+    }
+}
+        }
+    }
+}
+}
+if (Servicio == "N")  {
+    console.log("Uso cancelado.")
+}
+</script>
+</body>
+</html>
